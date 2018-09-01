@@ -10,7 +10,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('calc');
+        $treeBuilder->root('komarovm1988_calc');
 
         return $treeBuilder;
     }
