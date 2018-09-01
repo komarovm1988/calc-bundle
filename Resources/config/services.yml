@@ -1,0 +1,3 @@
+services:
+  Komarovm1988\CalcBundle\Controller\CalcController:
+    autoconfigure: true
