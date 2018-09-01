@@ -11,7 +11,7 @@ namespace Komarovm1988\CalcBundle\Controller;
 use Komarovm1988\CalcBundle\Service\CalcInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class CalcController extends AbstractController
 {
@@ -24,12 +24,20 @@ class CalcController extends AbstractController
     }
 
     /**
-     * @Route("/calc")
-     * @param string $input
+     * @param Request $request
      * @return JsonResponse
      */
-    public function getCalcResult(string $input): JsonResponse
+    public function getCalcResult(Request $request): JsonResponse
     {
+        $input = $request->get('input');
+
+        if ($input === null) {
+            $this->json([
+                'status' => 'error',
+                'message' => 'Не указан входной параметр input',
+            ]);
+        }
+
         $calcResult = $this->calcService->getCalcResult($input);
 
         return $this->json([
