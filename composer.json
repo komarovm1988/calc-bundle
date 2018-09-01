@@ -23,7 +23,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Komarovm1988\\CalcBundle\\Tests\\": "Tests/"
+      "Komarovm1988\\CalcBundle\\Tests\\": "tests/"
     }
   }
 }

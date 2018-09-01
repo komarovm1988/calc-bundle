@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class Komarovm1988CalcExtension extends Extension
+class CalcExtension extends Extension
 {
     /**
      * @param array $configs

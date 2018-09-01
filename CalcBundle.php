@@ -7,7 +7,7 @@ use Komarovm1988\CalcBundle\Service\CalcInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class Komarovm1988CalcBundle extends Bundle
+class CalcBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
